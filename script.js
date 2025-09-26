@@ -53,3 +53,47 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+
+// Hamburger menu toggle
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.querySelector(".hamburger");
+  const nav = document.querySelector("nav");
+
+  if (hamburger && nav) {
+    hamburger.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+  }
+});
+
+
+// Close nav on link click (mobile)
+document.querySelectorAll("nav a").forEach(link => {
+  link.addEventListener("click", () => {
+  });
+});
+
+// Smooth scroll with header offset (works on iOS Safari too)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    const targetId = this.getAttribute("href").substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      e.preventDefault();
+      const headerOffset = document.querySelector("header").offsetHeight;
+      const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - headerOffset + 5; // +5px gap
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+
+      // Close nav on mobile
+      const nav = document.querySelector("nav");
+      if (nav) nav.classList.remove("active");
+    }
+  });
+});
