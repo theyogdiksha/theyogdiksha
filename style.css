@@ -390,3 +390,133 @@ footer .logo { width: 50px; height: 50px; border-radius: 50%; object-fit: cover;
 #backToTop.show {
   animation: fadeInBackToTop 0.5s ease, floatUpDown 2s infinite ease-in-out;
 }
+
+
+
+/* Group Titles */
+.connect-group {
+  margin-bottom: 50px;
+}
+.connect-group h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #b5651d;
+  font-family: 'Merriweather', serif;
+}
+
+/* Social Media Brand Styles */
+.connect-card.linkedin:hover {
+  background: #0077b5;
+  color: #fff;
+}
+.connect-card.linkedin:hover i {
+  color: #fff;
+}
+.connect-card.instagram:hover {
+  background: radial-gradient(circle at 30% 30%, #f58529, #dd2a7b, #8134af, #515bd4);
+  color: #fff;
+}
+.connect-card.instagram:hover i {
+  color: #fff;
+}
+.connect-card.youtube:hover {
+  background: #ff0000;
+  color: #fff;
+}
+.connect-card.youtube:hover i {
+  color: #fff;
+}
+
+
+
+/* Email Hover */
+.connect-card[href^="mailto"]:hover {
+  background: #D44638; /* Gmail Red */
+  color: #fff;
+}
+.connect-card[href^="mailto"]:hover i {
+  color: #fff;
+}
+
+/* Phone Hover */
+.connect-card[href^="tel"]:hover {
+  background: #34af23; /* Green for Phone */
+  color: #fff;
+}
+.connect-card[href^="tel"]:hover i {
+  color: #fff;
+}
+
+/* WhatsApp Hover */
+.connect-card[href*="wa.me"]:hover {
+  background: #25D366; /* WhatsApp Green */
+  color: #fff;
+}
+.connect-card[href*="wa.me"]:hover i {
+  color: #fff;
+}
+
+/* Rising Effect with Fade In/Out Loop */
+.rising-text {
+  display: inline-block;
+  font-size: 36px;
+  font-family: 'Merriweather', serif;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  opacity: 0;
+  animation: riseFadeLoop 6s ease-in-out infinite;
+}
+
+@keyframes riseFadeLoop {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+
+/* Hero Center Adjustments */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 120px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #f5f0e1;
+  background: linear-gradient(rgba(60,40,10,0.6), rgba(60,40,10,0.7)), #f5f0e1;
+}
+
+.om-text {
+  font-size: 60px;
+  font-family: 'Merriweather', serif;
+  color: #fff;
+  text-shadow: 0 0 20px rgba(255,255,255,0.9), 0 0 35px rgba(255,255,255,0.8);
+  animation: riseFadeLoop 6s ease-in-out infinite;
+}
+
+.bright-text {
+  margin-top: 25px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 0 0 15px rgba(255,255,255,1), 0 0 35px rgba(255,255,255,0.95);
+}
